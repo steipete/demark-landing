@@ -34,7 +34,7 @@ export default function DemarkLandingPage() {
             <Button
               asChild
               size="lg"
-              className="bg-slate-700 hover:bg-slate-600 text-demark-cyan border border-demark-cyan font-semibold w-full sm:w-auto"
+              className="bg-slate-800 border border-demark-cyan text-demark-cyan hover:bg-slate-700 font-semibold w-full sm:w-auto"
             >
               <Link href="https://swiftpackageindex.com/steipete/Demark" target="_blank" rel="noopener noreferrer">
                 <BookOpen className="mr-2 h-5 w-5" /> Swift Package Index
@@ -129,14 +129,14 @@ export default function DemarkLandingPage() {
 
 @MainActor 
 func convertHTML() async throws {
-  let demark = Demark()
-  let html = "<h1>Hello World</h1><p>This is <strong>bold</strong> text.</p>"
-  let markdown = try await demark.convertToMarkdown(html)
-  print(markdown)
-  // Output: 
-  // # Hello World
-  //
-  // This is **bold** text.
+    let demark = Demark()
+    let html = "<h1>Hello World</h1><p>This is <strong>bold</strong> text.</p>"
+    let markdown = try await demark.convertToMarkdown(html)
+    print(markdown)
+    // Output: 
+    // # Hello World
+    //
+    // This is **bold** text.
 }`}
               </code>
             </pre>
