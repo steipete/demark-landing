@@ -4,6 +4,8 @@ import { Mona_Sans as FontSans } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider" // Assuming you have this
+import { Analytics } from "@vercel/analytics/next"
+import { Suspense } from "react"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -105,8 +107,9 @@ export default function RootLayout({
           enableSystem={false} // Force dark theme based on design
           disableTransitionOnChange
         >
-          {children}
+          <Suspense>{children}</Suspense>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
