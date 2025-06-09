@@ -2,7 +2,7 @@ import AnimatedBackground from "@/components/animated-background"
 import NewsletterForm from "@/components/newsletter-form"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Github, BookOpen, Zap, ExternalLink, Code2 } from "lucide-react"
+import { Github, BookOpen, Zap, ExternalLink, Code2, Newspaper } from "lucide-react"
 import Link from "next/link"
 
 export default function DemarkLandingPage() {
@@ -21,7 +21,7 @@ export default function DemarkLandingPage() {
             <span>Markdown out</span>
             <Zap className="h-6 w-6 sm:h-7 sm:w-7 text-yellow-400 inline-block" />
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <div className="mt-10 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4">
             <Button
               asChild
               size="lg"
@@ -38,6 +38,19 @@ export default function DemarkLandingPage() {
             >
               <Link href="https://swiftpackageindex.com/steipete/Demark" target="_blank" rel="noopener noreferrer">
                 <BookOpen className="mr-2 h-5 w-5" /> Swift Package Index
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              className="bg-slate-800 border border-demark-cyan text-demark-cyan hover:bg-slate-700 font-semibold w-full sm:w-auto"
+            >
+              <Link
+                href="https://steipete.me/posts/2025/introducing-demark-html-to-markdown-in-swift"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Newspaper className="mr-2 h-5 w-5" /> Read Announcement
               </Link>
             </Button>
           </div>
