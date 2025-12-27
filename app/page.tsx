@@ -10,7 +10,7 @@ export default function DemarkLandingPage() {
     <div className="relative min-h-screen flex flex-col text-demark-light-blue overflow-x-hidden">
       <AnimatedBackground />
 
-      <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 z-10">
+      <main className="grow container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 z-10">
         <header className="text-center mb-16 sm:mb-24 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
           <h1 className="text-6xl sm:text-7xl md:text-8xl font-extrabold tracking-tight">
             <span className="text-demark-cyan">DEMARK</span>

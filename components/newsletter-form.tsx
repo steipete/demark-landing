@@ -36,7 +36,7 @@ export default function NewsletterForm() {
         const errorData = await response.json()
         setMessage(`Error: ${errorData.detail || "Could not subscribe. Please try again."}`)
       }
-    } catch (error) {
+    } catch (_error) {
       setMessage("Error: Could not connect to the subscription service.")
     }
   }
