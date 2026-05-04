@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @source '../*.{js,ts,jsx,tsx,mdx}';
 
@@ -57,9 +57,9 @@
   --animate-fadeIn: fadeIn 1s ease-out;
 
   --font-sans:
-    var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
 
   @keyframes accordion-down {
     from {

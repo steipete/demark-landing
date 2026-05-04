@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 const SYMBOLS = [
   "<div>",
@@ -41,27 +41,27 @@ const SYMBOLS = [
   "font",
   "width",
   "height",
-]
+];
 
 interface SymbolItem {
-  id: number
-  text: string
-  top: string
-  left: string
-  animationDuration: string
-  animationDelay: string
-  opacity: number
-  fontSize: string
-  transform: string
+  id: number;
+  text: string;
+  top: string;
+  left: string;
+  animationDuration: string;
+  animationDelay: string;
+  opacity: number;
+  fontSize: string;
+  transform: string;
 }
 
 export default function AnimatedBackground() {
-  const [symbols, setSymbols] = useState<SymbolItem[]>([])
+  const [symbols, setSymbols] = useState<SymbolItem[]>([]);
 
   useEffect(() => {
     const generateSymbols = () => {
-      const newSymbols: SymbolItem[] = []
-      const count = typeof window !== "undefined" && window.innerWidth < 768 ? 30 : 60 // Fewer symbols on mobile
+      const newSymbols: SymbolItem[] = [];
+      const count = typeof window !== "undefined" && window.innerWidth < 768 ? 30 : 60; // Fewer symbols on mobile
       for (let i = 0; i < count; i++) {
         newSymbols.push({
           id: i,
@@ -73,14 +73,14 @@ export default function AnimatedBackground() {
           opacity: Math.random() * 0.15 + 0.05, // 0.05 to 0.2
           fontSize: `${Math.random() * 0.75 + 0.5}rem`, // 0.5rem to 1.25rem
           transform: `rotate(${Math.random() * 90 - 45}deg)`,
-        })
+        });
       }
-      setSymbols(newSymbols)
-    }
-    generateSymbols()
-    window.addEventListener("resize", generateSymbols)
-    return () => window.removeEventListener("resize", generateSymbols)
-  }, [])
+      setSymbols(newSymbols);
+    };
+    generateSymbols();
+    window.addEventListener("resize", generateSymbols);
+    return () => window.removeEventListener("resize", generateSymbols);
+  }, []);
 
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden bg-demark-bg">
@@ -103,5 +103,5 @@ export default function AnimatedBackground() {
         </span>
       ))}
     </div>
-  )
+  );
 }

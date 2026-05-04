@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Mail } from "lucide-react"
-import { useState } from "react"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Mail } from "lucide-react";
+import { useState } from "react";
 
 export default function NewsletterForm() {
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setMessage("Subscribing...")
+    e.preventDefault();
+    setMessage("Subscribing...");
 
     try {
       const response = await fetch("https://buttondown.email/api/emails/embed-subscribe/steipete", {
@@ -27,19 +27,19 @@ export default function NewsletterForm() {
           tag: "demark",
           embed: "1",
         }),
-      })
+      });
 
       if (response.ok) {
-        setMessage("Success! Check your inbox to confirm.")
-        setEmail("")
+        setMessage("Success! Check your inbox to confirm.");
+        setEmail("");
       } else {
-        const errorData = await response.json()
-        setMessage(`Error: ${errorData.detail || "Could not subscribe. Please try again."}`)
+        const errorData = await response.json();
+        setMessage(`Error: ${errorData.detail || "Could not subscribe. Please try again."}`);
       }
-    } catch (_error) {
-      setMessage("Error: Could not connect to the subscription service.")
+    } catch {
+      setMessage("Error: Could not connect to the subscription service.");
     }
-  }
+  };
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -70,7 +70,9 @@ export default function NewsletterForm() {
         </div>
       </form>
       {message && <p className="mt-3 text-sm text-center text-demark-light-blue">{message}</p>}
-      <p className="mt-3 text-xs text-center text-demark-symbol-blue">2× per month, pure signal, zero fluff.</p>
+      <p className="mt-3 text-xs text-center text-demark-symbol-blue">
+        2× per month, pure signal, zero fluff.
+      </p>
     </div>
-  )
+  );
 }

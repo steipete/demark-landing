@@ -1,9 +1,9 @@
-import AnimatedBackground from "@/components/animated-background"
-import NewsletterForm from "@/components/newsletter-form"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Github, BookOpen, Zap, ExternalLink, Code2, Newspaper } from "lucide-react"
-import Link from "next/link"
+import AnimatedBackground from "@/components/animated-background";
+import NewsletterForm from "@/components/newsletter-form";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { GitBranch, BookOpen, Zap, ExternalLink, Code2, Newspaper } from "lucide-react";
+import Link from "next/link";
 
 export default function DemarkLandingPage() {
   return (
@@ -11,7 +11,10 @@ export default function DemarkLandingPage() {
       <AnimatedBackground />
 
       <main className="grow container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 z-10">
-        <header className="text-center mb-16 sm:mb-24 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
+        <header
+          className="text-center mb-16 sm:mb-24 animate-fadeIn"
+          style={{ animationDelay: "0.2s" }}
+        >
           <h1 className="text-6xl sm:text-7xl md:text-8xl font-extrabold tracking-tight">
             <span className="text-demark-cyan">DEMARK</span>
           </h1>
@@ -27,8 +30,12 @@ export default function DemarkLandingPage() {
               size="lg"
               className="bg-demark-cyan hover:bg-opacity-80 text-demark-bg font-semibold w-full sm:w-auto"
             >
-              <Link href="https://github.com/steipete/Demark" target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-5 w-5" /> View on GitHub
+              <Link
+                href="https://github.com/steipete/Demark"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitBranch className="mr-2 h-5 w-5" /> View on GitHub
               </Link>
             </Button>
             <Button
@@ -36,7 +43,11 @@ export default function DemarkLandingPage() {
               size="lg"
               className="bg-slate-800 border border-demark-cyan text-demark-cyan hover:bg-slate-700 font-semibold w-full sm:w-auto"
             >
-              <Link href="https://swiftpackageindex.com/steipete/Demark" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://swiftpackageindex.com/steipete/Demark"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <BookOpen className="mr-2 h-5 w-5" /> Swift Package Index
               </Link>
             </Button>
@@ -56,17 +67,23 @@ export default function DemarkLandingPage() {
           </div>
         </header>
 
-        <section id="about" className="mb-16 sm:mb-24 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-demark-cyan">What is Demark?</h2>
+        <section
+          id="about"
+          className="mb-16 sm:mb-24 animate-fadeIn"
+          style={{ animationDelay: "0.4s" }}
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-demark-cyan">
+            What is Demark?
+          </h2>
           <div className="max-w-3xl mx-auto space-y-6 text-lg leading-relaxed text-center">
             <p>
-              Demark is a Swift package designed to convert messy, potentially malformed HTML into clean, pristine
-              Markdown. It's the little helper that chomps HTML and spits out beautiful Markdown, perfect for any Swift
-              application needing robust HTML processing.
+              Demark is a Swift package designed to convert messy, potentially malformed HTML into
+              clean, pristine Markdown. It's the little helper that chomps HTML and spits out
+              beautiful Markdown, perfect for any Swift application needing robust HTML processing.
             </p>
             <p>
-              Born out of the need for a reliable solution to handle real-world HTML, Demark leverages the power of
-              proven JavaScript libraries (
+              Born out of the need for a reliable solution to handle real-world HTML, Demark
+              leverages the power of proven JavaScript libraries (
               <Link
                 href="https://github.com/mixmark-io/turndown"
                 target="_blank"
@@ -84,13 +101,17 @@ export default function DemarkLandingPage() {
               >
                 html-to-md
               </Link>
-              ) by running them inside a WKWebView. This gives you access to full browser DOM parsing capabilities right
-              within your Swift code.
+              ) by running them inside a WKWebView. This gives you access to full browser DOM
+              parsing capabilities right within your Swift code.
             </p>
           </div>
         </section>
 
-        <section id="features" className="mb-16 sm:mb-24 animate-fadeIn" style={{ animationDelay: "0.6s" }}>
+        <section
+          id="features"
+          className="mb-16 sm:mb-24 animate-fadeIn"
+          style={{ animationDelay: "0.6s" }}
+        >
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-demark-cyan">
             Two Powerful Engines
           </h2>
@@ -129,8 +150,14 @@ export default function DemarkLandingPage() {
           </div>
         </section>
 
-        <section id="usage" className="mb-16 sm:mb-24 animate-fadeIn" style={{ animationDelay: "0.8s" }}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-demark-cyan">Simple to Use</h2>
+        <section
+          id="usage"
+          className="mb-16 sm:mb-24 animate-fadeIn"
+          style={{ animationDelay: "0.8s" }}
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-demark-cyan">
+            Simple to Use
+          </h2>
           <div className="max-w-2xl mx-auto bg-slate-800 border border-slate-700 rounded-lg p-6 shadow-lg">
             <div className="flex items-center text-sm text-slate-400 mb-2">
               <Code2 className="h-4 w-4 mr-2 text-demark-cyan" />
@@ -159,8 +186,14 @@ func convertHTML() async throws {
           </div>
         </section>
 
-        <section id="newsletter" className="mb-16 sm:mb-24 animate-fadeIn" style={{ animationDelay: "1s" }}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-demark-cyan">Stay Updated</h2>
+        <section
+          id="newsletter"
+          className="mb-16 sm:mb-24 animate-fadeIn"
+          style={{ animationDelay: "1s" }}
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-demark-cyan">
+            Stay Updated
+          </h2>
           <NewsletterForm />
         </section>
       </main>
@@ -200,7 +233,7 @@ func convertHTML() async throws {
             rel="noopener noreferrer"
             aria-label="Demark on GitHub"
           >
-            <Github className="h-6 w-6 text-demark-symbol-blue hover:text-demark-cyan transition-colors" />
+            <GitBranch className="h-6 w-6 text-demark-symbol-blue hover:text-demark-cyan transition-colors" />
           </Link>
           <Link
             href="https://steipete.me/posts/2025/introducing-demark-html-to-markdown-in-swift/"
@@ -213,5 +246,5 @@ func convertHTML() async throws {
         </div>
       </footer>
     </div>
-  )
+  );
 }

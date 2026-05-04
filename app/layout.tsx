@@ -1,22 +1,22 @@
-import type React from "react"
-import type { Metadata, Viewport } from "next"
-import { Mona_Sans as FontSans } from "next/font/google"
-import "./globals.css"
-import { cn } from "@/lib/utils"
-import { ThemeProvider } from "@/components/theme-provider" // Assuming you have this
-import { Analytics } from "@vercel/analytics/next"
-import { Suspense } from "react"
+import type React from "react";
+import type { Metadata, Viewport } from "next";
+import { Mona_Sans as FontSans } from "next/font/google";
+import "./globals.css";
+import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider"; // Assuming you have this
+import { Analytics } from "@vercel/analytics/next";
+import { Suspense } from "react";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-})
+});
 
-const siteUrl = "https://demark.md"
-const siteTitle = "Demark: Swift HTML to Markdown Converter | Fast & Accurate"
+const siteUrl = "https://demark.md";
+const siteTitle = "Demark: Swift HTML to Markdown Converter | Fast & Accurate";
 const siteDescription =
-  "Demark is a powerful Swift package for converting HTML to clean Markdown. Features two engines for accuracy (Turndown.js) and speed (html-to-md). Ideal for iOS, macOS, watchOS, tvOS, and visionOS apps."
-const ogImage = `${siteUrl}/images/banner-1.png` // Assuming banner-1.png is in public/images
+  "Demark is a powerful Swift package for converting HTML to clean Markdown. Features two engines for accuracy (Turndown.js) and speed (html-to-md). Ideal for iOS, macOS, watchOS, tvOS, and visionOS apps.";
+const ogImage = `${siteUrl}/images/banner-1.png`; // Assuming banner-1.png is in public/images
 
 export const metadata: Metadata = {
   title: siteTitle,
@@ -74,18 +74,18 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest", // If you plan to add a webmanifest
-    generator: 'v0.dev'
-}
+  generator: "v0.dev",
+};
 
 export const viewport: Viewport = {
   themeColor: "#0A192F", // Matches demark-bg
   colorScheme: "dark", // Assuming a predominantly dark theme
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -112,5 +112,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
