@@ -18,6 +18,30 @@ Your project is live at:
 
 ## Build your app
 
+For local development, use Node.js 22 or newer and the pnpm version pinned in
+`package.json` (currently 11.24.0):
+
+```sh
+pnpm install --frozen-lockfile
+pnpm dev
+```
+
+Run the full verification before opening a pull request:
+
+```sh
+pnpm check
+```
+
+This builds the production app, checks formatting and types, runs the linter, and
+runs the production HTTP smoke test. The test starts the built Next.js server on
+an available loopback port, checks the landing page, JavaScript/CSS assets,
+manifest icons, and a missing route, then stops the server. To rerun just the test
+after building, use `pnpm test`.
+
+GitHub Actions runs the same checks on pull requests and pushes to `main`, using
+Node.js 24 and a frozen pnpm lockfile. Building downloads the Mona Sans font from
+Google Fonts, so the build requires network access.
+
 Continue building your app on:
 
 **[https://v0.dev/chat/projects/xRUhtzJoMlW](https://v0.dev/chat/projects/xRUhtzJoMlW)**
