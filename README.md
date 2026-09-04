@@ -19,7 +19,7 @@ Your project is live at:
 ## Build your app
 
 For local development, use Node.js 22 or newer and the pnpm version pinned in
-`package.json` (currently 11.24.0):
+`package.json` (currently 11.25.0):
 
 ```sh
 pnpm install --frozen-lockfile
