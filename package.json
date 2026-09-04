@@ -50,8 +50,8 @@
     "date-fns": "4.4.0",
     "embla-carousel-react": "8.6.0",
     "input-otp": "1.5.0",
-    "lucide-react": "^1.37.0",
-    "next": "16.3.3",
+    "lucide-react": "^1.40.0",
+    "next": "16.3.4",
     "next-themes": "^0.4.6",
     "react": "^19.2.8",
     "react-day-picker": "10.0.1",
@@ -67,19 +67,19 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
-    "@types/node": "^26.4.0",
+    "@types/node": "^26.4.1",
     "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.5",
+    "@types/react-dom": "^19.2.6",
     "@typescript/native-preview": "7.0.0-dev.20260707.2",
-    "oxfmt": "^0.65.0",
-    "oxlint": "^1.80.0",
+    "oxfmt": "^0.66.0",
+    "oxlint": "^1.81.0",
     "oxlint-tsgolint": "^7.0.2001",
-    "postcss": "^8.5.26",
+    "postcss": "^8.5.27",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2"
   },
   "engines": {
     "node": ">=22"
   },
-  "packageManager": "pnpm@11.24.0"
+  "packageManager": "pnpm@11.25.0"
 }
