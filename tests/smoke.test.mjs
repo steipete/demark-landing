@@ -68,6 +68,15 @@ test(
       assert.ok(html.includes(content), `Missing landing-page content: ${content}`);
     }
     assert.match(html, /<link[^>]+rel="canonical"[^>]+href="https:\/\/demark.md"/);
+    const form = html.match(/<form\b[^>]*>/)?.[0] ?? "";
+    assert.match(
+      form,
+      /action="https:\/\/buttondown\.email\/api\/emails\/embed-subscribe\/steipete"/,
+    );
+    assert.match(form, /method="post"/);
+    assert.match(html, /<input[^>]*name="tag"[^>]*value="demark"/);
+    assert.match(html, /<input[^>]*name="embed"[^>]*value="1"/);
+    assert.equal(html.includes("Could not connect to the subscription service"), false);
     t.diagnostic("GET / -> 200; landing-page content, newsletter form, and canonical URL verified");
 
     const assets = [
