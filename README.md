@@ -38,6 +38,11 @@ an available loopback port, checks the landing page, JavaScript/CSS assets,
 manifest icons, and a missing route, then stops the server. To rerun just the test
 after building, use `pnpm test`.
 
+The newsletter form posts directly to Buttondown and navigates to its verification
+response. To check the handoff manually, submit a synthetic `.invalid` address
+from the production build and verify the Buttondown response in the browser;
+completing an inbox confirmation is not required.
+
 GitHub Actions runs the same checks on pull requests and pushes to `main`, using
 Node.js 24 and a frozen pnpm lockfile. Building downloads the Mona Sans font from
 Google Fonts, so the build requires network access.
